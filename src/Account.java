@@ -32,7 +32,7 @@ public class Account {
     }
 
     public void withdraw(int amount) throws NotEnoughMoneyException {
-        if (this.amount - amount >= 0) {
+        if (this.amount >= amount) {
             this.amount -= amount;
         } else {
             throw new NotEnoughMoneyException("Not enough money!");
